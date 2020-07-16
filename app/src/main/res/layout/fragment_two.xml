@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="2"
+    android:background="@android:color/transparent"
+    android:fadeScrollbars="true">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/relativeLayout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#F9EEEE">
+
+                    <ImageView
+                        android:id="@+id/img_sound"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        android:cropToPadding="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/sound_on" />
+
+                    <TextView
+                        android:id="@+id/txt1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Notification Sound"
+                        android:textColor="@color/DarkRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/sound_btn"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/img_sound"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.37" />
+
+                    <TextView
+                        android:id="@+id/sound_status_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Alerts are ON"
+                        android:textSize="12sp"
+                        app:autoSizeMaxTextSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/img_sound"
+                        app:layout_constraintTop_toBottomOf="@+id/txt1_1" />
+
+
+                    <com.rm.rmswitch.RMSwitch
+                        android:id="@+id/sound_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="10dp"
+                        app:checked="true"
+                        app:enabled="true"
+                        app:forceAspectRatio="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:switchBkgCheckedColor="@color/DarkRed"
+                        app:switchBkgNotCheckedColor="@color/LightGrey"
+                        app:switchDesign="android"
+                        app:switchToggleCheckedColor="@color/Black"
+                        app:switchToggleCheckedImage="@drawable/gogaga"
+                        app:switchToggleNotCheckedColor="@color/Black"
+                        app:switchToggleNotCheckedImage="@drawable/gogaga" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_sound">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#83F4DEDE">
+
+                    <ImageView
+                        android:id="@+id/img_visibility"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/eye_visible" />
+
+                    <TextView
+                        android:id="@+id/txt2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Matchmaker-Only Mode"
+                        android:textColor="@color/DarkRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:autoSizeTextType="uniform"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_visiblity"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/img_visibility"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.367" />
+
+                    <TextView
+                        android:id="@+id/matchmaker_status_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="3dp"
+                        android:text="You Profile is visible"
+                        android:textColor="#827D7D"
+                        android:textSize="12sp"
+                        app:autoSizeMaxTextSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/img_visibility"
+                        app:layout_constraintTop_toBottomOf="@+id/txt2_1" />
+
+                    <com.rm.rmswitch.RMSwitch
+                        android:id="@+id/btn_visiblity"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="10dp"
+                        app:checked="false"
+                        app:enabled="true"
+                        app:forceAspectRatio="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:switchBkgCheckedColor="@color/DarkRed"
+                        app:switchBkgNotCheckedColor="@color/LightGrey"
+                        app:switchDesign="android"
+                        app:switchToggleCheckedColor="@color/Black"
+                        app:switchToggleCheckedImage="@drawable/gogaga"
+                        app:switchToggleNotCheckedColor="@color/Black"
+                        app:switchToggleNotCheckedImage="@drawable/gogaga" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_profile">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/c3"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#F9EEEE">
+
+                    <com.rm.rmswitch.RMSwitch
+                        android:id="@+id/btn_lang"
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="10dp"
+                        app:checked="false"
+                        app:enabled="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:switchBkgCheckedColor="@color/DarkRed"
+                        app:switchBkgNotCheckedColor="@color/Salmon"
+                        app:switchDesign="android"
+                        app:switchToggleCheckedColor="@color/Black"
+                        app:switchToggleCheckedImage="@drawable/hindi_"
+                        app:switchToggleNotCheckedColor="@color/Black"
+                        app:switchToggleNotCheckedImage="@drawable/eng_" />
+
+                    <TextView
+                        android:id="@+id/txt3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Language"
+                        android:textColor="@color/DarkRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_lang"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.36" />
+
+                    <TextView
+                        android:id="@+id/txt_lang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Current Language is English"
+                        android:textSize="12sp"
+                        app:autoSizeMaxTextSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toBottomOf="@+id/txt3_1" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:cropToPadding="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/language" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_whitelist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_language"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/c4"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#F9EEEE">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/bell" />
+
+                    <Button
+                        android:id="@+id/btn_go"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/color_gradient_theme"
+                        android:text="Go"
+
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:text="Enable App notifications"
+                        android:textColor="@color/DarkRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:autoSizeMaxTextSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_go"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.329" />
+
+                    <TextView
+                        android:id="@+id/txt_enable_noti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Get notifications from GoGaga"
+                        android:textSize="12sp"
+                        app:autoSizeMaxTextSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView4"
+                        app:layout_constraintTop_toBottomOf="@+id/txt4_1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+                    <!--                    <net.colindodd.toggleimagebutton.ToggleImageButton-->
+                    <!--                        android:layout_width="75dp"-->
+                    <!--                        android:layout_height="75dp"-->
+                    <!--                        android:layout_marginEnd="16dp"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintTop_toTopOf="parent"-->
+                    <!--                        app:layout_constraintVertical_bias="0.36"-->
+                    <!--                        app:tib_drawable_off="@drawable/hindi"-->
+                    <!--                        app:tib_drawable_on="@drawable/eng" />-->
+
+</LinearLayout>
